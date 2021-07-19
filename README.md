@@ -1,4 +1,4 @@
-# iGunZ-optimization-scripts
+# GunZ2034-optimization-scripts
 Set-NetTCPSetting : Only the custom templates InternetCustom and DatacenterCustom can be modified under Windows 8 and older Windows 10 versions.
 
 Even though theoretically only the "Custom" templates can be modified, many of the commands below (both netsh and PowerShell TCP cmdlets) are global and modify all templates simultaneously.
@@ -14,8 +14,176 @@ netsh int tcp show supplemental
 #To view the current template settings, use:
 
     Get-NetTCPSetting -SettingName "Internet"  (or your current template name)
+#make sure that you do not uses the service before disabling it.
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:Client-ProjFS
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:DirectPlay
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:HypervisorPlatform
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-ApplicationDevelopment
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-ApplicationInit
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-ASP
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-ASPNET
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-ASPNET45
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-BasicAuthentication
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-CGI
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-CommonHttpFeatures
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-CustomLogging
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-DefaultDocument
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-DirectoryBrowsing
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-FTPExtensibility
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-FTPServer
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-FTPSvc
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-HealthAndDiagnostics
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-HostableWebCore
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-HttpCompressionDynamic
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-HttpCompressionStatic
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-HttpErrors
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-HttpLogging
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-HttpRedirect
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-HttpTracing
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-IIS6ManagementCompatibility
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-IPSecurity
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-ISAPIExtensions
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-ISAPIFilter
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-LegacyScripts
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-LegacySnapIn
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-LoggingLibraries
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-ManagementConsole
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-ManagementScriptingTools
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-ManagementService
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-Metabase
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-NetFxExtensibility
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-NetFxExtensibility45
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-Performance
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-RequestFiltering
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-RequestMonitor
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-Security
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-ServerSideIncludes
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-StaticContent
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-URLAuthorization
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-WebDAV
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-WebServer
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-WebServerManagementTools
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-WebServerRole
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-WebSockets
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:IIS-WMICompatibility
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:Internet-Explorer-Optional-amd64
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:LegacyComponents
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:MediaPlayback
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:MicrosoftWindowsPowerShellV2
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:MicrosoftWindowsPowerShellV2Root
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:Microsoft-Windows-Subsystem-Linux
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:MSMQ-Container
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:MSMQ-DCOMProxy
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:MSMQ-HTTP
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:MSMQ-Multicast
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:MSMQ-Server
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:MSMQ-Triggers
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:NetFx4Extended-ASPNET45
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:Printing-Foundation-LPDPrintService 
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:Printing-Foundation-LPRPortMonitor
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:Printing-XPSServices-Features
+rem Dism.exe /Online /Disable-Feature /NoRestart /featurename:RasRip
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:SimpleTCP
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:SMB1Protocol
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:SMB1Protocol-Client
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:SMB1Protocol-Deprecation
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:SMB1Protocol-Server
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:SNMP
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:TelnetClient
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:TFTP
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:TIFFIFilter
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:VirtualMachinePlatform
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:WAS-ConfigurationAPI
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:WAS-NetFxEnvironment
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:WAS-ProcessModel
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:WAS-WindowsActivationService
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:WCF-HTTP-Activation
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:WCF-HTTP-Activation45
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:WCF-MSMQ-Activation45
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:WCF-NonHTTP-Activation
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:WCF-Pipe-Activation45
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:WCF-Services45
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:WCF-TCP-Activation45
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:WCF-TCP-PortSharing45
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:Windows-Identity-Foundation
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:WindowsMediaPlayer
+rem Dism.exe /Online /Disable-Feature /NoRestart /featurename:WMISnmpProvider
+Dism.exe /Online /Disable-Feature /NoRestart /featurename:WorkFolders-Client
+Dism.exe /Online /Enable-Feature /NoRestart /featurename:FaxServicesClientPackage
+Dism.exe /Online /Enable-Feature /NoRestart /featurename:Microsoft-Windows-NetFx3-OC-Package
+Dism.exe /Online /Enable-Feature /NoRestart /featurename:Microsoft-Windows-NetFx3-WCF-OC-Package
+Dism.exe /Online /Enable-Feature /NoRestart /featurename:Microsoft-Windows-NetFx4-US-OC-Package
+Dism.exe /Online /Enable-Feature /NoRestart /featurename:Microsoft-Windows-NetFx4-WCF-US-OC-Package
+Dism.exe /Online /Enable-Feature /NoRestart /featurename:MSRDC-Infrastructure
+Dism.exe /Online /Enable-Feature /NoRestart /featurename:NetFx3
+Dism.exe /Online /Enable-Feature /NoRestart /featurename:NetFx4-AdvSrvs
+Dism.exe /Online /Enable-Feature /NoRestart /featurename:Printing-Foundation-Features
+Dism.exe /Online /Enable-Feature /NoRestart /featurename:Printing-Foundation-InternetPrinting-Client 
+Dism.exe /Online /Enable-Feature /NoRestart /featurename:Printing-PrintToPDFServices-Features
+Dism.exe /Online /Enable-Feature /NoRestart /featurename:SearchEngine-Client-Package
+Dism.exe /Online /Enable-Feature /NoRestart /featurename:Windows-Defender-Default-Definitions
+
+netsh advfirewall firewall set rule group="Connect" new enable=no
+netsh advfirewall firewall set rule group="Contact Support" new enable=no
+netsh advfirewall firewall set rule group="Cortana" new enable=no
+netsh advfirewall firewall set rule group="DiagTrack" new enable=no
+netsh advfirewall firewall set rule group="Feedback Hub" new enable=no
+netsh advfirewall firewall set rule group="Microsoft Photos" new enable=no
+netsh advfirewall firewall set rule group="OneNote" new enable=no
+netsh advfirewall firewall set rule group="Remote Assistance" new enable=no
+netsh advfirewall firewall set rule group="Windows Spotlight" new enable=no netsh advfirewall set allprofile state on
+ netsh advfirewall firewall add rule name=deny445 dir=in action=block protocol=TCP localport=445
+#netsh advfirewall firewall add rule name="Block Domain and Private Networking" dir=out action=block profile=domain,private enable=yes | Out-Null
+#netsh advfirewall firewall add rule name="Block Windows Update" dir=out action=block program="%SystemRoot%\system32\svchost.exe" protocol=TCP remoteport=80,443 profile=any enable=yes | Out-Null
+#netsh advfirewall firewall add rule name="Core Networking - DNS" dir=out action=allow program="%SystemRoot%\system32\svchost.exe" protocol=UDP remoteport=53 profile=public enable=yes | Out-Null
+#netsh advfirewall firewall add rule name="Core Networking - DHCP" dir=out action=allow program="%SystemRoot%\system32\svchost.exe" protocol=UDP localport=68 remoteport=67 profile=public enable=yes | Out-Null
+			netsh advfirewall firewall add rule name="Block Domain and Private Networking" dir=in action=block profile=domain,private enable=yes | Out-Null		}
+# Enable Firewall Profiles & Disable Local Firewall Rules
+Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled True -AllowLocalFirewallRules False
+	
+New-ItemProperty -Force -Path "HKLM:\SYSTEM\CurrentControlSet\Services\NetBT\Parameters" -Name "EnableLMHOSTS" -PropertyType DWord -Value 0 | Out-Null
+
+# Disable NetBIOS
+Disable-NetAdapterBinding -Name "*" -ComponentID "ms_pacer" | Out-Null
+
+# Disable SMB Server
+
+Disable-NetAdapterBinding -Name "*" -ComponentID "ms_server" | Out-Null
+
+# Disable Ipv6
+
+Disable-NetAdapterBinding -Name "*" -ComponentID "ms_tcpip6" | Out-Null
+New-ItemProperty -Force -Path "HKLM:\SYSTEM\CurrentControlSet\Services\TCPIP6\Parameters" -Name "DisabledComponents" -PropertyType DWord -Value "0xFFFFFFFF" | Out-Null
+
+# Disable LLDP
+write "`n Disabling LLDP `n"
+
+Disable-NetAdapterBinding -Name "*" -ComponentID "ms_lldp" | Out-Null
+
+# Disable LLTD
 
 
+Disable-NetAdapterBinding -Name "*" -ComponentID "ms_lltdio" | Out-Null
+Disable-NetAdapterBinding -Name "*" -ComponentID "ms_rspndr" | Out-Null
+
+# Disable SMBv1
+Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB1 -Value 0
+
+# Cred Exposure and Credential Hardening
+Set-ItemProperty HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System -Name LocalAccountTokenFilterPolicy -Value 0
+Set-ItemProperty HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System -Name FilterAdministratorToken -Value 1
+Set-ItemProperty HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System -Name EnableLUA -Value 1
+
+# Cleartext Password Protection
+Set-ItemProperty HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\WDigest -Name UseLogonCredential -Value 0
+Set-ItemProperty HKLM:\SYSTEM\CurrentControlSet\Control\Lsa -Name TokenLeakDetectDelaySecs -Value 30
+powershell "Disable-MMAgent -MemoryCompression"
+
+# Disable MS Net Client
+	write "`n Disabling MS Net Client `n"
+
+# Block SMB
+netsh advfirewall firewall set rule group=”File and Printer Sharing” new enable=no
 
 Notes:
 PowerShell cmdlets are not case-sensitive. Even though some settings below modify all templates, it may still be necessary to sometimes change the default template used for TCP connections from Internet to Custom/InternetCustom. The following command supposedly changes the default (does not work as documented by MS under Windows 8/8.1):
